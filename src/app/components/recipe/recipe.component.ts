@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../../interfaces/recipe';
 import { NgIf, UpperCasePipe } from '@angular/common';
 import { RecipeFormComponent } from "../recipe-form/recipe-form.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe',
@@ -19,6 +20,8 @@ export class RecipeComponent {
   isEditMode: boolean = false;
   showForm: boolean = false;
   showInstructions: boolean = false;
+
+  constructor(private router: Router) {}
 
   editRecipe(recipeId: any) {
     this.selectedRecipeId = recipeId;
@@ -47,6 +50,10 @@ export class RecipeComponent {
     }
 
     this.delete.emit(recipeId);
+  }
+
+  viewRecipe(recipeId: any) {
+    this.router.navigate(['/home', recipeId])
   }
 
 }

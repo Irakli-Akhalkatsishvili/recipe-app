@@ -1,0 +1,7 @@
+<div *ngIf="recipe">
+    <h2>{{ recipe.title | uppercase}}</h2>
+    <img [src]="recipe.image" alt="{{ recipe.title }}" width="300">
+    <p><strong>Category:</strong> {{ recipe.category }}</p>
+    <p><strong>Instructions:</strong></p>
+    <p>{{ recipe.instructions }}</p>
+</div>
