@@ -1,0 +1,6 @@
+<div>
+    <button (click)="toggleView()">{{ favButton ? "Show All" : "Show Favourites"}}</button>
+</div>
+<div *ngFor="let recipe of recipes$ | async" style="margin-bottom: 20px;">
+    <app-recipe [recipe]="recipe" (statusChanged)="toggleFavourite($event)" (recipeChanged)="showAll()" (delete)="deleteRecipe($event)" />
+</div>

@@ -1,0 +1,60 @@
+{
+  "recipes": [
+    {
+      "title": "Spaghetti Bolognese",
+      "category": "Italian",
+      "instructions": "1. Cook spaghetti according to package instructions.\n2. In a pan, sauté onions and garlic until translucent.\n3. Add ground beef and cook until browned.\n4. Stir in tomato sauce and simmer for 20 minutes.\n5. Serve sauce over spaghetti and garnish with parsley.",
+      "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+      "favourite": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Chicken Tikka Masala",
+      "category": "Indian",
+      "instructions": "1. Marinate chicken with yogurt and spices for 2 hours.\n2. Grill or bake the chicken until slightly charred.\n3. In a pot, sauté onions, garlic, and ginger.\n4. Add tomato puree and cream, then simmer.\n5. Add cooked chicken and simmer for 10 minutes.",
+      "image": "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg",
+      "favourite": false
+    },
+    {
+      "id": "3",
+      "title": "Beef Stroganoff",
+      "category": "Russian",
+      "instructions": "1. Cook egg noodles and set aside.\n2. In a pan, sauté mushrooms and onions until golden.\n3. Add beef strips and cook until browned.\n4. Stir in sour cream and mustard, then simmer.\n5. Serve over egg noodles and garnish with parsley.",
+      "image": "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg",
+      "favourite": false
+    },
+    {
+      "id": "4",
+      "title": "Caesar Salad",
+      "category": "Salad",
+      "instructions": "1. Tear romaine lettuce into bite-sized pieces.\n2. Toss with Caesar dressing, croutons, and grated Parmesan cheese.\n3. Add grilled chicken for a hearty variation.",
+      "image": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg",
+      "favourite": false
+    },
+    {
+      "id": "5",
+      "title": "Vegetable Stir-Fry",
+      "category": "Asian",
+      "instructions": "1. Heat oil in a wok or pan over high heat.\n2. Add garlic and ginger, stir-fry until fragrant.\n3. Add vegetables and cook until tender-crisp.\n4. Stir in soy sauce and sesame oil.\n5. Serve with steamed rice or noodles.",
+      "image": "https://www.themealdb.com/images/media/meals/wqurxy1511453156.jpg",
+      "favourite": false
+    },
+    {
+      "id": "c08e",
+      "title": "Beef and Mustard Pie",
+      "category": "Beef",
+      "instructions": "1. Preheat the oven.\\n2. Prepare the beef filling with mustard and spices.\\n3. Roll out the pastry.\\n4. Add filling and bake until golden brown.",
+      "image": "https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg",
+      "favourite": false
+    },
+    {
+      "id": "ae02",
+      "title": "Arrabiata Pasta",
+      "category": "Italian",
+      "instructions": "1. Cook pasta until al dente.\\n2. Sauté garlic in olive oil.\\n3. Add chili flakes and tomato sauce.\\n4. Mix cooked pasta with the sauce and serve hot.",
+      "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+      "favourite": false
+    }
+  ]
+}
