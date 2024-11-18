@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 import { Recipe } from '../../interfaces/recipe';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { RecipeComponent } from "../recipe/recipe.component";
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-recipelist',
   standalone: true,
-  imports: [NgFor, RecipeComponent, AsyncPipe, RouterOutlet],
+  imports: [NgFor, RecipeComponent, AsyncPipe, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './recipelist.component.html',
   styleUrl: './recipelist.component.css'
 })

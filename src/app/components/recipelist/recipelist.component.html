@@ -1,7 +1,8 @@
+<nav>
+    <button class="btn" routerLink="categories" routerLinkActive="active">Categories</button>   
+</nav>
+<router-outlet />
+<hr>
 <div *ngFor="let recipe of recipes$ | async">
     <app-recipe [recipe]="recipe" (statusChanged)="toggleFavourite($event)" (delete)="deleteRecipe($event)" />
-</div>
-
-<div>
-    <router-outlet />
 </div>

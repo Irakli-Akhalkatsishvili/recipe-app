@@ -5,9 +5,12 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FavouriteRecipesComponent } from './components/favourite-recipes/favourite-recipes.component';
 import { RecipeCardComponent } from './components/recipe-card/recipe-card.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { CategoryComponent } from './components/category/category.component';
 
 export const routes: Routes = [
-    { path: 'home', component: RecipelistComponent },
+    { path: 'home', component: RecipelistComponent, children: [
+        { path: 'categories', component: CategoryComponent }
+    ] },
     { path: 'favourites', component: FavouriteRecipesComponent, canActivate: [AuthGuardService] },
     { path: 'home/:id', component: RecipeCardComponent },
     { path: 'add-new', component: RecipeFormComponent, canActivate: [AuthGuardService] },
