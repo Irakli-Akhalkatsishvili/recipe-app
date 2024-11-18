@@ -32,10 +32,6 @@ export class RecipeComponent {
     this.showForm = !this.showForm;
   }
 
-  toggleInstructions(): void {
-    this.showInstructions = !this.showInstructions;
-  }
-
   updateRecipe(): void {
     this.recipeChanged.emit(this.recipe);
   }

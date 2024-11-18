@@ -16,8 +16,6 @@ export class RecipeFormComponent implements OnInit {
   recipeForm!: FormGroup;
   @Input() isEditMode: boolean = false;
   @Input() recipeId?: string;
-  @Output() recipeAdded: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @Output() formUpdated: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private formBuilder: FormBuilder, private recipeService: RecipeService, private router: Router) {}
   
@@ -42,11 +40,12 @@ export class RecipeFormComponent implements OnInit {
 
     if (this.isEditMode && this.recipeId) {
       this.recipeService.updateRecipe(this.recipeId, recipe).subscribe(() => {
-        this.formUpdated.emit(true);
+        alert('Recipe updated successfully!');
       });
     } else {
       this.recipeService.createRecipe(recipe).subscribe(() => {
-        this.recipeAdded.emit(true);
+        alert('Recipe added successfully!');
+        this.recipeForm.reset();
       });
     }
 
