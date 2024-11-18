@@ -14,6 +14,9 @@
               <a routerLink="/add-new" routerLinkActive="active" class="nav-link">Add New Recipe</a>
             </li>
           </ul>
+          <button *ngIf="!isLoggedIn()" class="btn btn-success" (click)="logIn()">Log In</button>
+          <button *ngIf="isLoggedIn()" class="btn btn-success" (click)="logOut()">Log Out</button>
+          <button class="btn btn-outline-success" (click)="goBack()">Go Back</button>
         </div>
       </div>
     </nav>

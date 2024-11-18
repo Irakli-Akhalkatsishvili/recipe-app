@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-recipelist',
   standalone: true,
-  imports: [NgFor, RecipeComponent, AsyncPipe],
+  imports: [NgFor, RecipeComponent, AsyncPipe, RouterOutlet],
   templateUrl: './recipelist.component.html',
   styleUrl: './recipelist.component.css'
 })
@@ -29,6 +29,6 @@ export class RecipelistComponent implements OnInit {
   }
 
   deleteRecipe(recipeId: string): void {
-    this.recipeService.deleteRecipe(recipeId);
+    this.recipeService.deleteRecipe(recipeId).subscribe();
   }
 }

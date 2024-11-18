@@ -30,6 +30,6 @@ export class FavouriteRecipesComponent implements OnInit {
   }
 
   deleteRecipe(recipeId: string): void {
-    this.recipeService.deleteRecipe(recipeId);
+    this.recipeService.deleteRecipe(recipeId).subscribe();
   }
 }
