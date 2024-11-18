@@ -3,11 +3,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RecipeService } from '../../services/recipe.service';
 import { Recipe } from '../../interfaces/recipe';
 import { Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-recipe-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './recipe-form.component.html',
   styleUrl: './recipe-form.component.css'
 })
@@ -22,11 +23,11 @@ export class RecipeFormComponent implements OnInit {
   
   ngOnInit(): void {
     this.recipeForm = this.formBuilder.group({
-      title: ['', [Validators.required]],
+      title: ['', [Validators.required, Validators.minLength(3)]],
       category: ['', [Validators.required]],
-      instructions: ['', [Validators.required]],
-      image: ['', [Validators.required]],
-      favourite: ['']
+      instructions: ['', [Validators.required, Validators.minLength(20)]],
+      image: [''],
+      favourite: [false]
     });
 
     if (this.isEditMode && this.recipeId) {
