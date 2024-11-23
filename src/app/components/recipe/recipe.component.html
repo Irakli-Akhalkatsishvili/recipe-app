@@ -1,0 +1,14 @@
+<div *ngIf="!!recipe">
+    <h3>{{ recipe.title | uppercase }}</h3>
+    <img [src]="recipe.image" alt="{{ recipe.title }}" width="200" (click)="viewRecipe(recipe.id)" style="cursor: pointer">
+      
+    <button (click)="toggleFavourite()">
+        {{ recipe.favourite ? "Unmark as Favourite" : "Mark as Favourite" }}
+    </button>
+  
+    <button (click)="toggleRecipeForm()" (click)="editRecipe(recipe.id)">Update the Recipe</button>
+    <div *ngIf="showForm">
+      <app-recipe-form [isEditMode]="isEditMode" [recipeId]="selectedRecipeId" (formUpdated)="updateRecipe()" />
+      <button (click)="deleteRecipe(recipe.id)">Delete the recipe</button>
+    </div>
+</div>
